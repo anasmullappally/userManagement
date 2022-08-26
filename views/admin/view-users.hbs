@@ -1,0 +1,36 @@
+<section>
+  <div class="container">
+    <div class="row mt-5 mb-5">
+      <a href="/admin/add-user" class="btn btn-success ms-auto">Add User</a>
+    </div>
+
+
+
+
+
+    <table id="table_id" class="display table">
+      <thead>
+        <tr class="table-warning">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Edit User</th>
+          <th>Delete User</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each users}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.email}}</td>
+
+          <td><a href="/admin/edit-user/{{this._id}}" class="btn btn-primary">Edit</a></td>
+          <td><a href="/admin/delete-user/{{this._id}}" class="btn btn-danger"
+              onclick="return confirm('Are you sure,you want to delete {{this.name}}?')">Delete</a></td>
+
+        </tr>
+        {{/each}}
+      </tbody>
+
+    </table>
+</section>

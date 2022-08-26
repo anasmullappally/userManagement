@@ -1,0 +1,29 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Add User</h2>
+                <form action="/admin/adduser"method="post" id="adminadduser" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="name" class="form-control">
+                    <br>
+                    <br>
+                     <label for="">Email</label>
+                    <input type="text" name="email" class="form-control ">
+                    <br>
+                    <br>
+                     <label for="">Password</label>
+                    <input type="text" name="Password" class="form-control">
+                    {{#if Alreadyexist}}
+                    <p>User already exist</p>
+                    
+                    {{/if}}
+                     <br>
+                     <br>
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
